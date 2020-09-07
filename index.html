@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <title>Look at that CSS reset</title>
+<style id="jsbin-css">
+html, body {
+  height: 100%;
+}
+
+#clock {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  font-family: 'Aldrich', sans-serif;
+  font-size:4rem;
+  margin-top:-2rem;
+}
+</style>
+</head>
+<body>
+    <div id="clock">12:13:14</div>
+<script id="jsbin-javascript">
+function colorClock(){
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+
+  if (hours <= 9) {
+    hours = '0' + hours;
+  }
+  if (minutes <= 9) {
+    minutes = '0' + minutes;
+  }
+  if (seconds <= 9) {
+    seconds = '0' + seconds;
+  }
+
+  var clockFace = hours + ':' + minutes + ':' + seconds;
+   var clockColor ='#' + hours + minutes + seconds;
+document.body.style.background = clockColor;
+  document.getElementById('clock').innerHTML = clockFace;
+  
+  setTimeout(function() {
+  colorClock();
+}, 1000);
+}
+
+colorClock()
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">html, body {
+  height: 100%;
+}
+
+#clock {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  font-family: 'Aldrich', sans-serif;
+  font-size:4rem;
+  margin-top:-2rem;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">function colorClock(){
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+
+  if (hours <= 9) {
+    hours = '0' + hours;
+  }
+  if (minutes <= 9) {
+    minutes = '0' + minutes;
+  }
+  if (seconds <= 9) {
+    seconds = '0' + seconds;
+  }
+
+  var clockFace = hours + ':' + minutes + ':' + seconds;
+   var clockColor ='#' + hours + minutes + seconds;
+document.body.style.background = clockColor;
+  document.getElementById('clock').innerHTML = clockFace;
+  
+  setTimeout(function() {
+  colorClock();
+}, 1000);
+}
+
+colorClock()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script></body>
+</html>
